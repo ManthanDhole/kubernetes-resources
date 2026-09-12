@@ -43,3 +43,25 @@ spec:
           envFrom:
             - configMapRef:
                 name: dependency-track-configmap
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dependency-track-postgres
+  namespace: dependency-track
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dependency-track-pgsql
+  template:
+    metadata:
+      labels:
+        app: dependency-track-pgsql
+    spec:
+      containers:
+        - name: dependency-postgresql
+          image: postgres:18-alpine
+          envFrom:
+            - configMapRef:
+                name: dependency-track-configmap

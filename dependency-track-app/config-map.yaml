@@ -7,3 +7,6 @@ data:
   DT_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/dtrack"
   DT_DATASOURCE_USERNAME: "dtrack"
   DT_DATASOURCE_PASSWORD: "dtrack"
+  POSTGRES_DB: "dtrack"
+  POSTGRES_USER: "dtrack"
+  POSTGRES_PASSWORD: "dtrack"
