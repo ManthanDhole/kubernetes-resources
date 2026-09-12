@@ -4,7 +4,7 @@ metadata:
   name: dependency-track-configmap
   namespace: dependency-track
 data:
-  DT_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/dtrack"
+  DT_DATASOURCE_URL: "jdbc:postgresql://dependency-track-postgresql:5432/dtrack"
   DT_DATASOURCE_USERNAME: "dtrack"
   DT_DATASOURCE_PASSWORD: "dtrack"
   POSTGRES_DB: "dtrack"
