@@ -18,6 +18,9 @@ spec:
           image: dependencytrack/frontend:4-snapshot
           ports: 
             - containerPort: 8080
+      envFrom:
+            - configMapRef:
+                name: dependency-track-configmap
 
 ---
 apiVersion: apps/v1
