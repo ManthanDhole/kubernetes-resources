@@ -4,7 +4,7 @@ metadata:
   name: apiserver-pvc
   namespace: dependency-track
 spec:
-  accessMode:
+  accessModes:
     - ReadWriteOnce
   resources:
     requests:
@@ -17,7 +17,7 @@ metadata:
   name: postgres-pvc
   namespace: dependency-track
 spec:
-  accessMode:
+  accessModes:
     - ReadWriteOnce
   resources:
     requests:
