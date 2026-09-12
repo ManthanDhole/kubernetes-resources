@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dependency-track-service
+spec:
+  type: ClusterIP
+  selector:
+    app: dependency-track-application
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8080

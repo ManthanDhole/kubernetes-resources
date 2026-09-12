@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dependency-track-app
+  namespace: dependency-track
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dependency-track-application
+  template:
+    metadata:
+      labels:
+        app: dependency-track-application
+    spec:
+      containers:
+        - name: dependency-ui
+          image: dependencytrack/frontend:4-snapshot
+          ports: 
+            - containerPort: 8080
