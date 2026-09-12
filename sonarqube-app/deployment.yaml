@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sonarqube-app
+  namespace: sonarqube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sonarqube-application
+  template:
+    metadata:
+      labels:
+        app: sonarqube-application
+    spec:
+      containers:
+        - name: sonarqube-container
+          image: sonarqube:latest
+          ports:
+            - containerPort: 9000
+            
