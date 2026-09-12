@@ -10,4 +10,4 @@ data:
   POSTGRES_DB: "dtrack"
   POSTGRES_USER: "dtrack"
   POSTGRES_PASSWORD: "dtrack"
-  API_BASE_URL: "http://localhost:8082"
+  API_BASE_URL: "http://localhost:8085"
