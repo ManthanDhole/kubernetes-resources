@@ -40,3 +40,6 @@ spec:
           image: dependencytrack/apiserver:5-snapshot
           ports: 
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: dependency-track-configmap
