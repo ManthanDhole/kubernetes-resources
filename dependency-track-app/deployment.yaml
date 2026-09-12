@@ -18,3 +18,25 @@ spec:
           image: dependencytrack/frontend:4-snapshot
           ports: 
             - containerPort: 8080
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dependency-track-backend
+  namespace: dependency-track
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dependency-track-apiserver
+  template:
+    metadata:
+      labels:
+        app: dependency-track-apiserver
+    spec:
+      containers:
+        - name: dependency-apiserver
+          image: dependencytrack/apiserver:5-snapshot
+          ports: 
+            - containerPort: 8080
