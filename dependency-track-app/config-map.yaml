@@ -10,4 +10,5 @@ data:
   POSTGRES_DB: "dtrack"
   POSTGRES_USER: "dtrack"
   POSTGRES_PASSWORD: "dtrack"
+  PGDATA: "/var/lib/postgresql/data/pgdata"
   API_BASE_URL: "http://localhost:8085"
