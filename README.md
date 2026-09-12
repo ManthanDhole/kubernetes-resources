@@ -1,2 +1,3 @@
 # kubernetes-resources
-This is a sample repository to be used for ArgoCD Sync Source 
+
+1. [Nginx Application](./nginx-app/deployment.yaml) 
